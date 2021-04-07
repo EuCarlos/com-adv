@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade Advogados</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../_assets/logo.png">
+    <!-- CSS  -->
+    <link rel="stylesheet" type="text/css" href="../_css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://kit.fontawesome.com/ac3cf98fe0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="fas fa-balance-scale"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/registros">REGISTROS</a>
+              </li>
+            </ul>
+            <!-- Botão de Login -->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Registrar
+              </button>
+
+              <!-- Janela Login -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Registrar Serviço</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="/registrar" method="POST">
+                    <div class="modal-body">
+                      <!-- Formulario registrar -->
+                      
+                        <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                        <input type="name" class="form-control" id="exampleFormControlInput1" name="nome" placeholder="nome completo">
+                        <label for="exampleFormControlInput1" class="form-label">Telefone de contato</label>
+                        <input type="name" class="form-control" id="exampleFormControlInput1" name="telefone" placeholder="(11) 91234-5678">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="usuario@email.com.br">
+                        <label for="exampleFormControlInput1" class="form-label">Estado</label>
+                        <select class="form-select" aria-label="Default select example" id="select" name="estado"></select>
+                        <label for="exampleFormControlTextarea1" class="form-label">Biografia</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1 biografia" rows="3" name="biografia"></textarea>
+                      
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-danger">Registrar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero -->
+    <section class="registros">
+        {{{body}}}
+    </section>
+    
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-twitter-square"></i></a>
+      </div>
+      <p class="copyright">
+          Copyright © 2021 - by Comunidade Advogados. Todos os diretos reservados.
+      </p>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <!-- Bootstrap -->
+    <script src="../_js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

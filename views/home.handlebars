@@ -1,0 +1,44 @@
+<h3 id="titulo-registro">REGISTROS</h3>
+<p>Todos os registros até o momento estão aqui</p>
+<table id="table_id" class="table table-hover">
+    <thead>
+        <tr class="table-dark">
+            <th><i class="fas fa-hashtag"></i></th>
+            <th><i class="fas fa-user-circle"></i> Nome</th>
+            <th><i class="fas fa-map-marked-alt"></i> Estado</th>
+            <th><i class="fas fa-phone-square-alt"></i> Telefone</th>
+            <th><i class="fas fa-envelope"></i> Email</th>
+            <th><i class="fas fa-quote-left"></i> Biografia</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each registros}}
+        <tr>
+            <th><a href="/delete/{{id}}"><button class="btn btn-outline-dark">🗑️</button></a></th>
+            <td style="white-space: nowrap;">{{ nome }}</td>
+            <td style="white-space: nowrap;">{{ estado }}</td>
+            <td style="white-space: nowrap;">{{ tel }}</td>
+            <td style="white-space: nowrap;">{{ email }}</td>
+            <td>{{ biografia }}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable({
+        "language": {
+            "lengthMenu": "Exibir _MENU_ registros por página",
+            "zeroRecords": "Desculpa - Nada encontrado",
+            "info": "Mostrando página _PAGE_ de _PAGES_",
+            "infoEmpty": "Nenhum registro disponível",
+            "infoFiltered": "(filtrado de _MAX_ registros no total)"
+        }
+    });
+} );
+</script>

@@ -1,0 +1,49 @@
+:root {
+    --primeira-cor: #CED4DA;
+    --segunda-cor: #212529;
+    --terceira-cor: #fff;
+    --primeira-fonte: 'Open Sans', sans-serif;
+}
+/* HERO */
+.hero {
+    background-image: url(../_assets/img1.png);
+    background-size: cover;
+    min-height:100vh;
+    color: var(--terceira-cor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+.hero h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.hero .btn {
+    background-color: var(--terceira-cor);
+    border-radius: 4px;
+    color: var(--segunda-cor);
+    padding: 10px 50px;
+    text-transform: uppercase;
+}
+@media (max-width: 700px){
+    .hero h1 { font-size: 2.5em;}
+    .hero h3 { font-size: 1.5em;}
+}
+/* Rodapé */
+.rodape {width: 100%; float: left; padding: 3% 4%; text-align: center; background-color: var(--segunda-cor);}
+.social-icons a {font-size: 1.5em; color: var(--primeira-cor); margin-right: 3%;}
+.social-icon a:last-child {margin-right: 0;}
+.social-icons a:hover {color: var(--terceira-cor);}
+.copyright {margin-top: 2%; color: var(--primeira-cor);}
+h2, h3, p { font-weight: bold;}
+h3 {font-size: 2em; text-align: center; margin-top: 25%; }
+
+.registros { margin: 5%; }
+.registros h3 { text-align: left;}
+#titulo-registro { font-weight: bold; font-size: 2.5em; text-align: center;}
