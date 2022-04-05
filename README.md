@@ -1,7 +1,8 @@
 # com-adv ⚖️
+_For the English version of this README, click [here](/locales/en/README.md)._
 
 <p align="center">
-<img src="https://i2.wp.com/trabalhosujo.com.br/wp//wp-content/uploads/2009/06/mikejackso.gif?resize=500%2C522&ssl=1" width="200px"><br>
+<img src="PrtSc/mj.gif" width="200px"><br>
 <img alt="build" src="https://img.shields.io/appveyor/build/eucarlos/com-adv">
 <img alt="repo size" src="https://img.shields.io/github/repo-size/eucarlos/com-adv?color=yellow">
 <img alt="license" src="https://img.shields.io/github/license/eucarlos/com-adv">
