@@ -4,6 +4,12 @@ const Registro = db.sequelize.define('registro', {
     nome: {
         type: db.Sequelize.STRING
     },
+    identificador: {
+        type: db.Sequelize.STRING
+    },
+    especialidade: {
+        type: db.Sequelize.STRING
+    },
     tel: {
         type: db.Sequelize.STRING
     },
@@ -15,8 +21,10 @@ const Registro = db.sequelize.define('registro', {
     },
     biografia: {
         type: db.Sequelize.TEXT
+    },
+    website: {
+        type: db.Sequelize.STRING
     }
 })
 
-// Registro.sync({force: true})
 module.exports = Registro

@@ -50,10 +50,13 @@ app.get("/delete/:id", function(req, res){
 app.post("/registrar", function(req, res){
     Registro.create({
         nome: req.body.nome,
+        identificador: req.body.identificador,
+        especialidade: req.body.especialidade,
         tel: req.body.telefone,
         email: req.body.email,
         estado: req.body.estado,
-        biografia: req.body.biografia
+        biografia: req.body.biografia,
+        website: req.body.website
     }).then(function(){
         res.render('paginaSucesso')
     }).catch(function(erro){
@@ -61,6 +64,8 @@ app.post("/registrar", function(req, res){
     })
 });
 
-app.listen(8081, function(){
-    console.log('servidor funcionando na porta')
+const PORT = 8081
+app.listen(PORT, function(){
+    console.log(`Servido funcionando na porta: ${PORT}`)
+    console.log(`acesse: localhost:${PORT}/`)
 });
