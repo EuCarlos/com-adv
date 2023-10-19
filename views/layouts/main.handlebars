@@ -47,15 +47,29 @@
                       <!-- Formulario registrar -->
                       
                         <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput1" name="nome" placeholder="nome completo">
-                        <label for="exampleFormControlInput1" class="form-label">Telefone de contato</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput1" name="telefone" placeholder="(11) 91234-5678">
+                        <input type="name" class="form-control" id="exampleFormControlInput1" name="nome" placeholder="nome completo" required>
+
+                        <label for="exampleFormControlInput1" class="form-label">Número de identificação profissional</label>
+                        <input type="name" class="form-control" id="exampleFormControlInput1" name="identificador" placeholder="000000/SP" required>
+
+                        <label for="exampleFormControlInput1" class="form-label">Especialidade</label>
+                        {{!-- <input type="name" class="form-control" id="exampleFormControlInput1" name="especialidade" placeholder="Especialidade" required> --}}
+                        <select class="form-select" aria-label="Default select example" id="especialidade" name="especialidade"></select>
+
+                        <label for="telefone" class="form-label">Telefone de contato</label>
+                        <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(11) 91234-5678" required>
+
                         <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="usuario@email.com.br">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="usuario@email.com.br" required>
+
                         <label for="exampleFormControlInput1" class="form-label">Estado</label>
                         <select class="form-select" aria-label="Default select example" id="select" name="estado"></select>
+
                         <label for="exampleFormControlTextarea1" class="form-label">Biografia</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1 biografia" rows="3" name="biografia"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1 biografia" rows="3" name="biografia" required></textarea>
+
+                        <label for="exampleFormControlInput1" class="form-label">Website</label>
+                        <input type="website" class="form-control" id="exampleFormControlInput1" name="website" placeholder="https://meusite.com.br" required>
                       
                       </div>
                       <div class="modal-footer">
