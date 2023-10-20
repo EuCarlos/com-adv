@@ -5,21 +5,26 @@
         <tr class="table-dark">
             <th><i class="fas fa-hashtag"></i></th>
             <th><i class="fas fa-user-circle"></i> Nome</th>
+            <th><i class="fas fa-id-card-alt"></i> Número de identificação profissional</th>
+            <th><i class="fas fa-user-tag"></i> Especialidade</th>
             <th><i class="fas fa-map-marked-alt"></i> Estado</th>
-            <th><i class="fas fa-phone-square-alt"></i> Telefone</th>
-            <th><i class="fas fa-envelope"></i> Email</th>
-            <th><i class="fas fa-quote-left"></i> Biografia</th>
         </tr>
     </thead>
     <tbody>
         {{#each registros}}
         <tr>
-            <th><a href="/delete/{{id}}"><button class="btn btn-outline-dark">🗑️</button></a></th>
+            <th>
+                <a href="/delete/{{id}}"><button class="btn btn-outline-dark"><i class="fas fa-trash"></i></button></a>
+                <a href="/registros/{{id}}"><button class="btn btn-outline-dark"><i class="fas fa-eye"></i></button></a>
+            </th>
             <td style="white-space: nowrap;">{{ nome }}</td>
+            <td style="white-space: nowrap;">{{ identificador }}</td>
+            <td style="white-space: nowrap;">{{ especialidade }}</td>
             <td style="white-space: nowrap;">{{ estado }}</td>
-            <td style="white-space: nowrap;">{{ tel }}</td>
+
+            {{!-- <td style="white-space: nowrap;">{{ tel }}</td>
             <td style="white-space: nowrap;">{{ email }}</td>
-            <td>{{ biografia }}</td>
+            <td>{{ biografia }}</td> --}}
         </tr>
         {{/each}}
     </tbody>

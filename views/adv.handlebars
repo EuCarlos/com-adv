@@ -1,0 +1,50 @@
+<section class="perfil">
+    <div id="avatar">
+        <img src="../_assets/avatar.png" alt="perfil">
+    </div>
+    <article>
+        <h3>
+            {{ registro.nome }} <span>{{ registro.identificador }}</span>
+            <img src="../_assets/verificado.png" alt="selo verificado">
+        </h3>
+        <h4><strong>Especialidade:</strong></h4>
+        <p>{{ registro.especialidade }}</p>
+
+        <h4><strong>Localidade:</strong></h4>
+        <p>{{ registro.estado }}</p>
+
+        <h4><strong>Sobre Mim</strong></h4>
+        <p>{{ registro.biografia }}</p>
+
+        <div style="margin-top: 3rem">
+            <a href="{{ registro.website }}" target="_blank" class="button-wrapper button-website">
+                <i class="fas fa-globe"></i> Meu website
+            </a>
+
+            <a href="tel:{{ registro.tel }}" target="_blank" class="button-wrapper button-tel">
+                <i class="fas fa-phone"></i> Ligue-me agora
+            </a>
+
+            <a href="https://wa.me/{{ registro.tel }}" target="_blank" class="button-wrapper button-whatsapp">
+                <i class="fab fa-whatsapp"></i> Chat
+            </a>
+
+            <a href="mailto:{{ registro.email }}" target="_blank" class="button-wrapper button-mail">
+                <i class="fas fa-envelope"></i> E-mail
+            </a>
+        </div>
+    </article>
+</section>
+
+<script>
+    const avatar = document.getElementById('avatar')
+    const colors = [
+        "#ffb703", "#606c38", "#ccd5ae", 
+        "#d4a373", "#d62828", "#bc4749", 
+        "#eb5e28", "#ffbf69", "#d1d646", 
+        "#5e60ce", "#d9ed92"
+    ]
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    avatar.setAttribute("style", `background: ${randomColor}`)
+</script>
+
