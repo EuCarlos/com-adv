@@ -37,6 +37,25 @@ app.get("/registros", function(req, res){
     })
 })
 
+// Rota amostragem de registro unico
+app.get("/registros/:id", (req, res) => {
+    // Registro.findOne({
+    //     where: {
+    //         'id': req.params.id
+    //     }
+    // })
+    Registro.findByPk(req.params.id)
+    .then((registro) => {
+                if (registro !== null) {
+                    // res.status(200).json(dad)
+                    res.render('adv', { registro: registro })
+                } else {
+                    res.render('paginaErro')
+                }
+            })
+    .catch((erro) => res.render('paginaErro'))
+})
+
 // Rota para apagar algum registro no BD
 app.get("/delete/:id", function(req, res){
     Registro.destroy({where: {'id': req.params.id}}).then(function(){
