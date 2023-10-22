@@ -37,6 +37,25 @@ app.get("/registros", function(req, res){
     })
 })
 
+// Rota amostragem de registro unico
+app.get("/registros/:id", (req, res) => {
+    // Registro.findOne({
+    //     where: {
+    //         'id': req.params.id
+    //     }
+    // })
+    Registro.findByPk(req.params.id)
+    .then((registro) => {
+                if (registro !== null) {
+                    // res.status(200).json(dad)
+                    res.render('adv', { registro: registro })
+                } else {
+                    res.render('paginaErro')
+                }
+            })
+    .catch((erro) => res.render('paginaErro'))
+})
+
 // Rota para apagar algum registro no BD
 app.get("/delete/:id", function(req, res){
     Registro.destroy({where: {'id': req.params.id}}).then(function(){
@@ -50,10 +69,13 @@ app.get("/delete/:id", function(req, res){
 app.post("/registrar", function(req, res){
     Registro.create({
         nome: req.body.nome,
+        identificador: req.body.identificador,
+        especialidade: req.body.especialidade,
         tel: req.body.telefone,
         email: req.body.email,
         estado: req.body.estado,
-        biografia: req.body.biografia
+        biografia: req.body.biografia,
+        website: req.body.website
     }).then(function(){
         res.render('paginaSucesso')
     }).catch(function(erro){
@@ -61,6 +83,8 @@ app.post("/registrar", function(req, res){
     })
 });
 
-app.listen(8081, function(){
-    console.log('servidor funcionando na porta')
+const PORT = 8081
+app.listen(PORT, function(){
+    console.log(`Servido funcionando na porta: ${PORT}`)
+    console.log(`acesse: localhost:${PORT}/`)
 });
